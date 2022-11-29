@@ -31,7 +31,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
-
     <!-- JS LIBS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
@@ -47,11 +46,10 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <div class="container d-flex justify-content-around mt-2">
+    <div class="container d-flex justify-content-around mt-4">
       <div class="app-block m-auto">
         <h1 class="task-head text-center my-3">Task Management</h1>
-
-        <div class="task-block p-5">
+        <div class="task-block p-4">
           <!-- Form -->
           <form>
             <div class="row mb-3">
@@ -77,46 +75,14 @@
             <button id="addTaskBtn" type="submit" class="btn btn-primary">
               Add Task
             </button>
+
+            <button id="saveEditBtn" class="btn btn-dark">Save Edit</button>
           </form>
-
           <!-- Tasks -->
-          <div class="tasks-container">
-            <div class="task-item p-3 my-4">
-              <div class="task-content">
-                <div class="d-flex align-items-center">
-                  <h5 class="task-h me-2">Go Shopping</h5>
-                  <div class="icon-box">
-                    <span
-                      class="class badge bg-success"
-                      data-bs-toggle="modal"
-                      data-bs-target="#editModal"
-                      ><i class="fa-regular fa-pen-to-square"></i
-                    ></span>
-                    <span
-                      class="badge bg-danger"
-                      data-bs-toggle="modal"
-                      data-bs-target="#deleteModal"
-                      ><i class="fa-solid fa-trash-can"></i
-                    ></span>
-                  </div>
-                </div>
-
-                <p class="task-p">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Inventore asperiores totam rem ducimus optio dignissimos nemo
-                  perspiciatis necessitatibus
-                </p>
-
-                <div class="date-box">
-                  <span>monday november 28 2022</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <div id="tasksContainer" class="tasks-container my-3"></div>
           <!-- Clear All Button -->
-          <div class="mt-5 text-center">
-            <button id="clear-btn" class="btn btn-danger w-75">
+          <div class="text-center">
+            <button id="clearBtn" class="btn btn-danger w-75 mt-5">
               Clear All
             </button>
           </div>

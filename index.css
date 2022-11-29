@@ -7,15 +7,24 @@ h1 {
   font-family: "Lobster", cursive;
   font-size: 40px;
 }
-
+h5 {
+  text-transform: capitalize;
+}
 .app-block {
   width: 80%;
-  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
-    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+@media (max-width: 600px) {
+  .app-block {
+    width: 100%;
+  }
 }
 .task-item {
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
 .task-item .date-box {
   font-size: 12px;
@@ -32,4 +41,8 @@ h1 {
 .icon-box span i {
   padding: 2px;
   font-size: 16px;
+}
+span.status {
+  font-size: 13px;
+  padding: 9px 18px;
 }
